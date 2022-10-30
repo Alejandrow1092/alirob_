@@ -34,10 +34,10 @@ const NavBar=()=>{
 <header className="header">
         <div className="container" id="menu">
             
-            <a href="/" className="logo">MCE</a>
+            <a /* href="/" */ /* className="logo" */><Link to="/" className="logo">MCE</Link></a>
 
-            <div id="menu" className={`menu-icon ${isActive ? "open": ""}`}>
-                <div className="menu-btn__burger" ref={menuButton} onClick={handdleToggle}></div>
+            <div id="menu" className={`menu-icon ${isActive ? "open": ""}`} onClick={handdleToggle}>
+                <div className="menu-btn__burger" ref={menuButton} ></div>
             </div>
 
             
@@ -45,17 +45,17 @@ const NavBar=()=>{
             <nav  id="navigation" ref={navigationLinks} className={`navigation ${isActive ? "active": ""}`}>
                 <menu className="sup">
                     <ul>
-                        <li><a /* href='/museo/participants' */><Link to="/participants">Participantss</Link></a></li>
-                        <li><a href="/grants">Grants</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a /* href='/museo/participants' */><Link to="/participants">Participants</Link></a></li>
+                        <li><a /* href="/grants" */><Link to="/grants">Grants</Link></a></li>
+                        <li><a /* href="/contact" */><Link to="/contact">Contact</Link></a></li>
                     </ul>
                 </menu>
                 <menu className="inf">
                     <ul>
-                        <li><a href="/">Inicio</a></li>
+                        <li>{/* <a  href="/" > */}<Link className="link-item" to="/">Inicio</Link>{/* </a> */}</li>
                         <li><a href="#">Museo</a></li>
-                        <li><a href="/galeria">Galeria</a></li>
-                        <li><a href="/about">About</a></li>
+                        <li>{/* <a href="/galeria"> */}<Link className="link-item" to="/galeria">Galeria</Link>{/* </a> */}</li>
+                        <li>{/* <a href="/about"> */}<Link className="link-item" to="/about">About</Link>{/* </a> */}</li>
                     </ul>
                 </menu>
             </nav>
