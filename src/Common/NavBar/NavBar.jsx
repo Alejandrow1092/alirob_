@@ -46,16 +46,16 @@ const NavBar=()=>{
                 <menu className="sup">
                     <ul>
                         <li><a /* href='/museo/participants' */><Link to="/participants">Participantss</Link></a></li>
-                        <li><a href="/museo/grants">Grants</a></li>
-                        <li><a href="/museo/contact">Contact</a></li>
+                        <li><a href="/grants">Grants</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </menu>
                 <menu className="inf">
                     <ul>
-                        <li><a href="/museo">Inicio</a></li>
+                        <li><a href="/">Inicio</a></li>
                         <li><a href="#">Museo</a></li>
-                        <li><a href="/museo/galeria">Galeria</a></li>
-                        <li><a href="/museo/about">About</a></li>
+                        <li><a href="/galeria">Galeria</a></li>
+                        <li><a href="/about">About</a></li>
                     </ul>
                 </menu>
             </nav>
