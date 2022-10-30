@@ -4,9 +4,6 @@ import "./NavBar.scss";
 import { useState, useRef, useEffect} from "react";
 
 
-
-
-
 /* menuButton.addEventListener('click', () => {
     navigationLinks.classList.toggle('active')
     menuButton.classList.toggle('open');
@@ -23,6 +20,12 @@ const NavBar=()=>{
         setActive(!isActive);
         console.log(`Active status is ${isActive}`)
     } 
+
+    const handleCloseMenu=()=>{
+        if(isActive===true){
+            setActive(false);
+        }
+    }
 
     useEffect(()=>{
         //navigationLinks.current.classList.toggle('active');
@@ -45,17 +48,17 @@ const NavBar=()=>{
             <nav  id="navigation" ref={navigationLinks} className={`navigation ${isActive ? "active": ""}`}>
                 <menu className="sup">
                     <ul>
-                        <li><a /* href='/museo/participants' */><Link to="/participants">Participants</Link></a></li>
-                        <li><a /* href="/grants" */><Link to="/grants">Grants</Link></a></li>
-                        <li><a /* href="/contact" */><Link to="/contact">Contact</Link></a></li>
+                        <li><a /* href='/museo/participants' */><Link to="/participants" onClick={handleCloseMenu}>Participants</Link></a></li>
+                        <li><a /* href="/grants" */><Link to="/grants" onClick={handleCloseMenu}>Grants</Link></a></li>
+                        <li><a /* href="/contact" */><Link to="/contact" onClick={handleCloseMenu}>Contact</Link></a></li>
                     </ul>
                 </menu>
                 <menu className="inf">
                     <ul>
-                        <li>{/* <a  href="/" > */}<Link className="link-item" to="/">Inicio</Link>{/* </a> */}</li>
+                        <li>{/* <a  href="/" > */}<Link className="link-item" to="/" onClick={handleCloseMenu}>Inicio</Link>{/* </a> */}</li>
                         <li><a href="#">Museo</a></li>
-                        <li>{/* <a href="/galeria"> */}<Link className="link-item" to="/galeria">Galeria</Link>{/* </a> */}</li>
-                        <li>{/* <a href="/about"> */}<Link className="link-item" to="/about">About</Link>{/* </a> */}</li>
+                        <li>{/* <a href="/galeria"> */}<Link className="link-item" to="/galeria" onClick={handleCloseMenu}>Galeria</Link>{/* </a> */}</li>
+                        <li>{/* <a href="/about"> */}<Link className="link-item" to="/about" onClick={handleCloseMenu}>About</Link>{/* </a> */}</li>
                     </ul>
                 </menu>
             </nav>
