@@ -34,7 +34,7 @@ const NavBar=()=>{
 <header className="header">
         <div className="container" id="menu">
             
-            <a href="/museo" className="logo">MCE</a>
+            <a href="/" className="logo">MCE</a>
 
             <div id="menu" className={`menu-icon ${isActive ? "open": ""}`}>
                 <div className="menu-btn__burger" ref={menuButton} onClick={handdleToggle}></div>
@@ -45,7 +45,7 @@ const NavBar=()=>{
             <nav  id="navigation" ref={navigationLinks} className={`navigation ${isActive ? "active": ""}`}>
                 <menu className="sup">
                     <ul>
-                        <li><a /* href='/museo/participants' */><Link to="/museo/participants">Participantss</Link></a></li>
+                        <li><a /* href='/museo/participants' */><Link to="/participants">Participantss</Link></a></li>
                         <li><a href="/museo/grants">Grants</a></li>
                         <li><a href="/museo/contact">Contact</a></li>
                     </ul>
