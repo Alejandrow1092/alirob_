@@ -1,6 +1,6 @@
 import React from "react";
 import "./Inicio.scss";
-
+import imagen1 from "../../assets/img/imagen1.jpg"
 const img = [
     /* "../assets/img/imagen1.jpg",
     "../assets/img/imagen2.jpg",
@@ -39,7 +39,7 @@ const Inicio=()=>{
         <>
         <main className="main">
         <div className="slider">
-            <img src="" alt="Portada" id="slider"/>
+            <img src={imagen1} alt="Portada" id="slider"/>
         </div>
 
        {/* <!--  primera seccion --> */}
